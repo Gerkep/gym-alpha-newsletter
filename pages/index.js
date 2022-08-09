@@ -16,9 +16,9 @@ const App = () => {
   return (
     <div className='h-full'>
       <div className='mx-auto bg-white w-10/12 ml-10 md:ml-auto py-6 pb-12 md:py-14 md:pb-32 mt-10 md:mt-16 rounded-md text-center border-4 border-black shadow-[-20px_20px_0px_0px_rgba(0,0,0,1)]'>
-      <img src='https://drive.google.com/uc?export=view&id=1SJr4B_D1Qt3LKcdpqg75zwzbjFeLOYf3' className="w-10 md:w-24 mx-auto"></img>
+      <img src='https://drive.google.com/uc?export=view&id=1SJr4B_D1Qt3LKcdpqg75zwzbjFeLOYf3' className="w-14 md:w-24 mx-auto"></img>
         <div className='text-2xl md:text-4xl font-montserrat font-black z-0'><h1 className='text-4xl md:text-7xl font-montserrat font-black mt-6 md:mt-10'>BUILDING </h1><Typed strings={textLines} backDelay={1200} typeSpeed={100} backSpeed={80} loop={true}/></div>
-        <p className='font-montserrat text-sm px-10 md:px-0 md:text-3xl mt-6 md:mt-14 font-medium'>Make sure you receive alpha before it's too late!🫵🏼 </p>
+        <p className='font-montserrat px-10 md:px-0 md:text-3xl mt-10 md:mt-14 font-medium'>Make sure you receive alpha before it's too late!🫵🏼 </p>
         <MailchimpSubscribe
                 url={process.env.NEXT_PUBLIC_MAILCHIMP_URL}
                 render={({ subscribe, status, message }) => (
