@@ -15,14 +15,14 @@ const App = () => {
 
   return (
     <div className='h-full'>
-      <div className='mx-auto bg-white w-10/12 py-10 pb-14 md:py-14 md:pb-32 mt-10 md:mt-16 rounded-md text-center border-4 border-black shadow-[-20px_20px_0px_0px_rgba(0,0,0,1)]'>
-      <img src='https://drive.google.com/uc?export=view&id=1SJr4B_D1Qt3LKcdpqg75zwzbjFeLOYf3' className="w-16 md:w-24 mx-auto"></img>
-        <div className='text-4xl font-montserrat font-black mt-10 z-0'><h1 className='text-5xl md:text-7xl font-montserrat font-black mt-10'>BUILDING </h1><Typed strings={textLines} backDelay={1200} typeSpeed={100} backSpeed={80} loop={true}/></div>
-        <p className='font-montserrat text-xl px-10 md:px-0 md:text-3xl mt-14 font-medium'>Make sure you receive alpha before it's too late!🫵🏼 </p>
+      <div className='mx-auto bg-white w-10/12 ml-10 md:ml-auto py-6 pb-12 md:py-14 md:pb-32 mt-10 md:mt-16 rounded-md text-center border-4 border-black shadow-[-20px_20px_0px_0px_rgba(0,0,0,1)]'>
+      <img src='https://drive.google.com/uc?export=view&id=1SJr4B_D1Qt3LKcdpqg75zwzbjFeLOYf3' className="w-10 md:w-24 mx-auto"></img>
+        <div className='text-2xl md:text-4xl font-montserrat font-black z-0'><h1 className='text-4xl md:text-7xl font-montserrat font-black mt-6 md:mt-10'>BUILDING </h1><Typed strings={textLines} backDelay={1200} typeSpeed={100} backSpeed={80} loop={true}/></div>
+        <p className='font-montserrat text-sm px-10 md:px-0 md:text-3xl mt-6 md:mt-14 font-medium'>Make sure you receive alpha before it's too late!🫵🏼 </p>
         <MailchimpSubscribe
                 url={process.env.NEXT_PUBLIC_MAILCHIMP_URL}
                 render={({ subscribe, status, message }) => (
-                <div className='mt-8'>
+                <div className='mt-6 md:mt-8'>
                   <NewsletterForm onSubmitted={formData => subscribe(formData)} />
                   {(status == "success" && success == true) && <div className='w-11/12 md:w-3/12 h-36 bg-white fixed right-5 md:left-auto top-5 md:right-5 border-black border-4 rounded-md shadow-[10px_10px_40px_-5px_rgba(0,0,0,0.3)]'>
                     <button type="button" onClick={() => setSuccess(false)} class="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 fixed top-7 right-7">
