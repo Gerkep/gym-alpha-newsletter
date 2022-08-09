@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import Typed from "react-typed";
 import NewsletterForm from '../components/NewsletterForm';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import MailchimpSubscribe, { EmailFormFields } from "react-mailchimp-subscribe"
 
 const textLines = ['FUTURE.', 'MUSCLES.', 'WEB3.', 'MINDSET.', 'NETWORK.', 'COMMUNITY.']
@@ -37,7 +38,7 @@ const App = () => {
                 </div>
                 )}
         />
-        <p className='mt-4 md:mt-0 md:mr-56 text-xs'>*By joining I agree with <a href="" className='font-bold'>privcy policy</a></p>
+        <p className='mt-4 md:mt-0 md:mr-56 text-xs'>*By joining I agree with <Link href="/policy"><b className='cursor-pointer'>privacy policy</b></Link></p>
       </div>
       <p className='text-center mt-12 md:mt-16 text-gray-400'>@2022 Gym Alpha All Rights Reserved.</p>
     </div>
